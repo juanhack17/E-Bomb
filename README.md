@@ -1,6 +1,6 @@
 ![Forks](	https://img.shields.io/github/forks/Khaness-Tpy/E-Bomb)
 ![LICENCE](https://img.shields.io/github/license/Khaness-Tpy/E-Bomb)
-![Stars](	https://img.shields.io/github/issues/Khaness-Tpy/E-Bomb)
+![Stars](	https://img.shields.io/github/stars/Khaness-Tpy/E-Bomb)
 
 
 
