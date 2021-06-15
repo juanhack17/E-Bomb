@@ -1,6 +1,9 @@
-![GitHub](https://img.shields.io/github/license/curioo/emailpyspam)
-![Build Status](https://img.shields.io/badge/Build-Passing-green)
-![GitHub top language](https://img.shields.io/github/languages/top/curioo/emailpyspam)
+![Forks](	https://img.shields.io/github/forks/Khaness-Tpy/E-Bomb)
+![LICENCE](https://img.shields.io/github/license/Khaness-Tpy/E-Bomb)
+![Stars](	https://img.shields.io/github/issues/Khaness-Tpy/E-Bomb)
+
+
+
 
 # E-Bomb
 
