@@ -21,7 +21,9 @@ def bomb():
   (__((__((___()     <- Su EMAIL                       //|       |
  (__((__((___()()_____________________________________// |E-Boomb|
 (__((__((___()()()------------------------------------'  |_______|   
-__________________________________________________________________   ''' + bcolors.ENDC
+__________________________________________________________________   
+Si no funciona: Control + C para salir
+''' + bcolors.ENDC
 
 
 os.system('clear')
@@ -34,32 +36,30 @@ except IOError:
 	print('Banner File not found')
 
 #Input
-print(bcolors.WARNING + '''
-Elije servicio de mensajeria:
+print(bcolors.WARNING  + '''
 
-░┼───────────────────────────┼░
-░│░░░░░░░░░░░░░░░░░░░░░░░░░░░│░
-░│░░░░░[1]░░░Gmail░░░░[1]░░░░│░
-░│░░░░░░░░░░░░░░░░░░░░░░░░░░░│░
-░│░░░░░[2]░░░Yahoo░░░░[2]░░░░│░
-░│░░░░░░░░░░░░░░░░░░░░░░░░░░░│░
-░│░░░░[3]░░░Outlook░░░░[3]░░░│░
-░│░░░░░░░░░░░░░░░░░░░░░░░░░░░│░
-░┼───────────────────────────┼░
-
-''' + bcolors.ENDC + '--------------------------------------------------------------')
+ 
+                            
+      [1]   Gmail    [1]    
+                            
+      [2]   Yahoo    [2]    
+                            
+     [3]   Outlook    [3]   
+                            
+  
+''' + bcolors.ENDC )
 try:
-	server = raw_input(bcolors.OKGREEN + '[+] Mail Server: ' + bcolors.ENDC)
-	user = raw_input(bcolors.OKGREEN + '[+] Tu Email: ' + bcolors.ENDC)
-	pwd = getpass.getpass(bcolors.OKGREEN + '[+] Contrasseña: ' + bcolors.ENDC)
-	to = raw_input(bcolors.OKGREEN + '[+] Para: ' + bcolors.ENDC)
-	subject = raw_input(bcolors.OKGREEN + '[+] Sujeto (Si quieres): ' + bcolors.ENDC)
-	body = raw_input(bcolors.OKGREEN + '[+] Mensaje: ' + bcolors.ENDC)
-	nomes = input(bcolors.OKGREEN + '[+] Numero de emails deseados: ' + bcolors.ENDC)
+	server = raw_input(bcolors.OKGREEN + '[+] Elije servicio de mensajeria: \n' + bcolors.ENDC)
+	user = raw_input(bcolors.OKGREEN + '[+] Tu Email: \n' + bcolors.ENDC)
+	pwd = getpass.getpass(bcolors.OKGREEN + '[+] Password: ' + bcolors.ENDC)
+	to = raw_input(bcolors.OKGREEN + '[+] Victima: \n' + bcolors.ENDC)
+	subject = raw_input(bcolors.OKGREEN + '[+] Titulo (opcional): \n' + bcolors.ENDC)
+	body = raw_input(bcolors.OKGREEN + '[+] Mensaje: \n' + bcolors.ENDC)
+	nomes = input(bcolors.OKGREEN + '[+] Numero de repeticiones: \n' + bcolors.ENDC)
 	no = 0
-	message = 'De: ' + user + '\nSubject: ' + subject + '\n' + body
+	message = 'From: ' + user + '\nSubject: ' + subject + '\n' + body
 except KeyboardInterrupt:
-	print bcolors.FAIL + '\nCanceled' + bcolors.ENDC
+	print bcolors.FAIL + '\nOPERACION CANCELADA \n Si esa no era tu ' + bcolors.ENDC
 	sys.exit()
 
 #Gmail
@@ -82,7 +82,7 @@ if server == '1' or server == 'gmail' or server == 'Gmail':
 			no += 1
 			time.sleep(.8)
 		except KeyboardInterrupt:
-			print bcolors.FAIL + '\nCanceled' + bcolors.ENDC
+			print bcolors.FAIL + '\nOPERACION CANCELADA \n Si esa no era tu ' + bcolors.ENDC
 			sys.exit()
 		except:
 			print "Failed to Send "
@@ -107,7 +107,7 @@ elif server == '2' or server == 'Yahoo' or server == 'yahoo':
 			no += 1
 			time.sleep(.8)
 		except KeyboardInterrupt:
-			print bcolors.FAIL + '\nCanceled' + bcolors.ENDC
+			print bcolors.FAIL + '\nOPERACION CANCELADA \n Si esa no era tu ' + bcolors.ENDC
 			sys.exit()
 		except:
 			print "Failed to Send"
@@ -122,7 +122,7 @@ elif server == '3' or server == 'outlook' or server == 'Outlook' or server == 'H
 	try:
 		server.login(user, pwd)
 	except smtplib.SMTPAuthenticationError:
-		print bcolors.FAIL + '[+] Nombre de usuario o contrasseña incorrecta' + bcolors.ENDC
+		print bcolors.FAIL + 'Tu Username o Password es incorrecta, por favor intentalo usando unas credenciales correctas' + bcolors.ENDC
 		sys.exit()
 	while no != nomes:
 		try:
@@ -131,7 +131,7 @@ elif server == '3' or server == 'outlook' or server == 'Outlook' or server == 'H
 			no += 1
 			time.sleep(.8)
 		except KeyboardInterrupt:
-			print bcolors.FAIL + '\nCanceled' + bcolors.ENDC
+			print bcolors.FAIL + '\nOPERACION CANCELADA \n Si esa no era tu ' + bcolors.ENDC
 			sys.exit()
 		except smtplib.SMTPAuthenticationError:
 			print '\n ERROR: Informacion no correcta.'
