@@ -27,7 +27,7 @@ Sigue las instrucciones que te da el repositorio
 
 Clona el repositorio
 ```
-git clone https://github.com/Curioo/emailpyspam.git
+git clone https://github.com/Khaness-Tpy/E-Bomb
 ```
 
 Instala las dependencias
@@ -39,7 +39,7 @@ apt install python2
 
 Navega hacia el repositorio
 ```
-cd emailspam
+cd E-Bomb
 ```
 
 Te saldra esto 
@@ -56,7 +56,7 @@ python2 EBOMB.py
 Despues solo tendras que seguir las instrucciones
 
 
-## Plataformas
+## Servicios de mesajeria
 
 Funciona en :
 * Gmail
@@ -74,13 +74,13 @@ Welcome message:
 ## Built With
 
 * [Python](https://www.python.org) - Lenguaje usado
-* [Reolit](https://Replit.com/) - IDE
+* [Replit](https://Replit.com/) - IDE
 
 
 
-## Autores
+## Autor
 
-* **Khaness-Tpy** 
+* **Khaness-Tpy** - Khaness-Army
 
 
 ## License
